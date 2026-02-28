@@ -1,0 +1,130 @@
+
+/* frontend/src/components/ConvertedCode.css */
+.converted-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.converted-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.converted-panel-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.converted-tabs {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.converted-tab {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+}
+
+.converted-tab:hover {
+  border-color: var(--accent-blue);
+  color: var(--text-primary);
+}
+
+.converted-tab.active {
+  background: rgba(0, 122, 204, 0.15);
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.code-block {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.code-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.download-btn,
+.copy-btn {
+  flex: 1;
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-weight: 500;
+}
+
+.download-btn {
+  background: rgba(78, 201, 176, 0.1);
+  color: var(--accent-green);
+  border-color: var(--accent-green);
+}
+
+.download-btn:hover {
+  background: rgba(78, 201, 176, 0.2);
+}
+
+.copy-btn {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
+
+.copy-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.todos-section {
+  background: rgba(244, 71, 71, 0.06);
+  border: 1px solid rgba(244, 71, 71, 0.2);
+  border-radius: 5px;
+  padding: 10px 12px;
+}
+
+.todos-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent-red);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.todo-item {
+  font-size: 12px;
+  color: var(--text-secondary);
+  padding: 2px 0;
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.todo-item::before {
+  content: '⚠';
+  color: var(--accent-yellow);
+  flex-shrink: 0;
+}

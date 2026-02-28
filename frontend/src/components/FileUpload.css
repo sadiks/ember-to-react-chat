@@ -1,0 +1,179 @@
+/* frontend/src/components/FileUpload.css */
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upload-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.dropzone {
+  border: 1.5px dashed var(--border);
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.dropzone:hover,
+.dropzone.active {
+  border-color: var(--accent-blue);
+  background: rgba(0, 122, 204, 0.08);
+  color: var(--accent-blue);
+}
+
+.dropzone .icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.dropzone p {
+  line-height: 1.5;
+}
+
+.dropzone .hint {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* ── File Queue ── */
+.file-queue {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.file-queue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.file-queue-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.clear-btn {
+  font-size: 11px;
+  color: var(--accent-red);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 3px;
+  transition: background 0.15s;
+}
+
+.clear-btn:hover {
+  background: rgba(244, 71, 71, 0.1);
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.file-item:hover {
+  background: var(--bg-hover);
+  border-color: var(--accent-blue);
+}
+
+.file-item.active {
+  border-color: var(--accent-blue);
+  background: rgba(0, 122, 204, 0.1);
+}
+
+.file-item .file-icon {
+  font-size: 14px;
+}
+
+.file-item .file-name {
+  flex: 1;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-item .file-status {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.file-status.pending {
+  background: rgba(220, 220, 170, 0.15);
+  color: var(--accent-yellow);
+}
+
+.file-status.converting {
+  background: rgba(0, 122, 204, 0.15);
+  color: var(--accent-blue);
+  animation: pulse 1.2s infinite;
+}
+
+.file-status.done {
+  background: rgba(78, 201, 176, 0.15);
+  color: var(--accent-green);
+}
+
+.file-status.error {
+  background: rgba(244, 71, 71, 0.15);
+  color: var(--accent-red);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Convert All Button */
+.convert-all-btn {
+  width: 100%;
+  padding: 9px;
+  background: var(--accent-blue);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.convert-all-btn:hover {
+  background: #1a8ad4;
+}
+
+.convert-all-btn:disabled {
+  background: var(--bg-hover);
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
